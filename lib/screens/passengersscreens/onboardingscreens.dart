@@ -3,17 +3,19 @@ import 'package:flutter/services.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/utils.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:taxi_app/screens/passengersscreens/dashboard.dart';
+import 'package:taxi_app/screens/passengersscreens/dashboardscreen.dart';
+import 'package:taxi_app/screens/passengersscreens/profile.dart';
 import 'package:taxi_app/screens/selectmode.dart';
 
-class PassengerScreen extends StatefulWidget {
-  const PassengerScreen({super.key});
+class PassengerOnboardingScreen extends StatefulWidget {
+  const PassengerOnboardingScreen({super.key});
 
   @override
-  State<PassengerScreen> createState() => _PassengerScreenState();
+  State<PassengerOnboardingScreen> createState() =>
+      _PassengerOnboardingScreenState();
 }
 
-class _PassengerScreenState extends State<PassengerScreen> {
+class _PassengerOnboardingScreenState extends State<PassengerOnboardingScreen> {
   List onBoardingData = [
     {
       'image': 'images/passanger1.png',
@@ -133,7 +135,7 @@ class _PassengerScreenState extends State<PassengerScreen> {
                           .primaryColor, // Use the primary color from the theme
                     ),
                     onPressed: () {
-                      Get.offAll(() => PassengerDashboard());
+                      Get.offAll(() => PassengerDashboardScreen());
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),

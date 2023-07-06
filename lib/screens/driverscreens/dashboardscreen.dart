@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:taxi_app/screens/passengersscreens/dashboard.dart';
+import 'package:taxi_app/pages/passenger/profile.dart';
+import 'package:taxi_app/screens/passengersscreens/dashboardscreen.dart';
 
 import '../../pages/driver/earning.dart';
 import '../../pages/driver/home.dart';
 import '../../pages/driver/profile.dart';
 import '../../pages/driver/rating.dart';
 
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({Key? key});
+class PassengerDashboardScreen extends StatefulWidget {
+  const PassengerDashboardScreen({Key? key});
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  State<PassengerDashboardScreen> createState() => _PassengerDashboardScreenState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _PassengerDashboardScreenState extends State<PassengerDashboardScreen> {
   final List<Map<String, dynamic>> drawerItems = [
     {
       'title': 'Home',
@@ -124,7 +125,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                 ),
                 onPressed: () {
-                  Get.to(() => PassengerDashboard());
+                  Get.to(() => PassengerProfileScreen());
                 },
                 child: Text(
                   'Passenger mode',
@@ -151,7 +152,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           BottomNavigationBarItem(
               icon: Icon(Icons.credit_card), label: 'Earnings'),
           BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Ratings'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Settings'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
         ],
       ),
       body: index == 0

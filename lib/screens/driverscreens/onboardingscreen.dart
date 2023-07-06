@@ -6,14 +6,14 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:taxi_app/screens/driverscreens/dashboardscreen.dart';
 import 'package:taxi_app/screens/selectmode.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+class DriverOnboardingScreen extends StatefulWidget {
+  const DriverOnboardingScreen({super.key});
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<DriverOnboardingScreen> createState() => _DriverOnboardingScreenState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _DriverOnboardingScreenState extends State<DriverOnboardingScreen> {
   List onBoardingData = [
     {
       'image': 'images/driver3.png',
@@ -117,7 +117,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           .primaryColor, // Use the primary color from the theme
                     ),
                     onPressed: () {
-                      Get.offAll(() => const DashboardScreen());
+                      Get.offAll(() => const PassengerDashboardScreen());
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),

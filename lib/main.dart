@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:taxi_app/screens/driverscreens/onboardingscreen.dart';
-import 'package:taxi_app/screens/passengersscreens/dashboard.dart';
-import 'package:taxi_app/screens/splashscreen.dart';
-
-import 'screens/driverscreens/dashboardscreen.dart';
-import 'screens/passengersscreens/tripscreen.dart';
+import 'package:taxi_app/screens/passengersscreens/dashboardscreen.dart';
+import 'screens/driverscreens/onboardingscreen.dart';
+import 'screens/passengersscreens/onboardingscreens.dart';
+import 'screens/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         // primarySwatch: Colors.blue,
         primaryColor: Colors.green[900],
-        appBarTheme: AppBarTheme(
+        appBarTheme:const AppBarTheme(
           iconTheme: IconThemeData(
               color: Colors.black), // Set the desired color for the drawer icon
         ),
@@ -44,12 +42,12 @@ class MyApp extends StatelessWidget {
       // home: const SplashScreen(),
       initialRoute: "/",
       routes: {
-        "/": (context) => SplashScreen(),
-        "/onboarding": (context) => OnboardingScreen(),
-        "/passengertripdetails": (context) => PassengerTripDetails(),
-        "/PassengerDashboard": (context) => PassengerDashboard(),
-        "/splash": (context) => const SplashScreen(),
-        "/dashboard": (context) => const DashboardScreen(),
+        "/": (context) =>const SplashScreen(),
+        "/DriverOnboardingScreen": (context) =>const DriverOnboardingScreen(),
+        "/PassengerOnboardingScreen": (context) =>const PassengerOnboardingScreen(),
+        "/PassengerDashboardScreen": (context) =>const PassengerDashboardScreen(),
+        // ignore: equal_keys_in_map
+        "/DriverOnboardingScreen": (context) =>const DriverOnboardingScreen(),
       },
     );
   }

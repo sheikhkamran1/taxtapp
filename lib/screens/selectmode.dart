@@ -69,7 +69,8 @@ class ModeScreen extends StatelessWidget {
                                       Theme.of(context).primaryColor,
                                 ),
                                 onPressed: () {
-                                  Get.offAll(() => const OnboardingScreen());
+                                  Get.offAll(
+                                      () => const DriverOnboardingScreen());
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.all(15.0),
@@ -91,7 +92,8 @@ class ModeScreen extends StatelessWidget {
                                       Theme.of(context).primaryColor,
                                 ),
                                 onPressed: () {
-                                  Get.offAll(() => const PassengerScreen());
+                                  Get.offAll(
+                                      () => const PassengerOnboardingScreen());
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.all(15.0),
