@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
-import '../../pages/driver/earning.dart';
-import '../../pages/driver/home.dart';
-import '../../pages/driver/profile.dart';
-import '../../pages/driver/rating.dart';
-import '../../pages/passenger/profile.dart';
+import 'package:taxi_app/pages/driver/home.dart';
+import 'package:taxi_app/pages/driver/profile.dart';
+import 'package:taxi_app/pages/passenger/booking.dart';
+import 'package:taxi_app/pages/passenger/help.dart';
 
 class PassengerDashboardScreen extends StatefulWidget {
   const PassengerDashboardScreen({Key? key});
@@ -21,15 +19,15 @@ class _PassengerDashboardScreenState extends State<PassengerDashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: Colors.transparent),
-    );
+    // SystemChrome.setSystemUIOverlayStyle(
+    //   SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    // );
 
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.2,
-        backgroundColor: Colors.white,
-      ),
+      // appBar: AppBar(
+      //   elevation: 0.2,
+      //   backgroundColor: Colors.white,
+      // ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.green[900],
         unselectedItemColor: Colors.grey[700],
@@ -54,9 +52,9 @@ class _PassengerDashboardScreenState extends State<PassengerDashboardScreen> {
       body: index == 0
           ? HomeScreen()
           : index == 1
-              ? EarningScreen()
+              ? BookingScreen()
               : index == 2
-                  ? RatingScreen()
+                  ? HelpScreen()
                   : ProfileScreen(),
     );
   }

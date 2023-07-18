@@ -9,14 +9,14 @@ import '../../pages/driver/home.dart';
 import '../../pages/driver/profile.dart';
 import '../../pages/driver/rating.dart';
 
-class PassengerDashboardScreen extends StatefulWidget {
-  const PassengerDashboardScreen({Key? key});
+class DriverDashboardScreen extends StatefulWidget {
+  const DriverDashboardScreen({Key? key});
 
   @override
-  State<PassengerDashboardScreen> createState() => _PassengerDashboardScreenState();
+  State<DriverDashboardScreen> createState() => _DriverDashboardScreenState();
 }
 
-class _PassengerDashboardScreenState extends State<PassengerDashboardScreen> {
+class _DriverDashboardScreenState extends State<DriverDashboardScreen> {
   final List<Map<String, dynamic>> drawerItems = [
     {
       'title': 'Home',
@@ -125,7 +125,7 @@ class _PassengerDashboardScreenState extends State<PassengerDashboardScreen> {
                   ),
                 ),
                 onPressed: () {
-                  Get.to(() => PassengerProfileScreen());
+                  Get.to(() => PassengerDashboardScreen());
                 },
                 child: Text(
                   'Passenger mode',

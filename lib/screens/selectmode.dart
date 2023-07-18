@@ -24,34 +24,40 @@ class ModeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: logoSize,
-                    height: logoSize,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'T',
-                          style: TextStyle(
-                            fontSize: logoSize * 0.4,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.green,
-                          ),
-                        ),
-                        Text(
-                          'axo',
-                          style: TextStyle(
-                            fontSize: logoSize * 0.2,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                    width: 150,
+                    child: Image.asset(
+                      "images/logo.png",
                     ),
                   ),
+                  // Container(
+                  //   width: logoSize,
+                  //   height: logoSize,
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.black,
+                  //     shape: BoxShape.circle,
+                  //   ),
+                  //   child: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.center,
+                  //     children: [
+                  //       Text(
+                  //         'T',
+                  //         style: TextStyle(
+                  //           fontSize: logoSize * 0.4,
+                  //           fontWeight: FontWeight.bold,
+                  //           color: Colors.green,
+                  //         ),
+                  //       ),
+                  //       Text(
+                  //         'axo',
+                  //         style: TextStyle(
+                  //           fontSize: logoSize * 0.2,
+                  //           fontWeight: FontWeight.bold,
+                  //           color: Colors.white,
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   SizedBox(height: screenHeight * 0.1),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -73,7 +79,7 @@ class ModeScreen extends StatelessWidget {
                                       () => const DriverOnboardingScreen());
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.all(15.0),
+                                  padding: const EdgeInsets.all(10.0),
                                   child: Text('As a Driver'),
                                 ),
                               ),
@@ -96,7 +102,7 @@ class ModeScreen extends StatelessWidget {
                                       () => const PassengerOnboardingScreen());
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.all(15.0),
+                                  padding: const EdgeInsets.all(10.0),
                                   child: Text('As a Passenger'),
                                 ),
                               ),

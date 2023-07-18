@@ -20,7 +20,7 @@ class _DriverOnboardingScreenState extends State<DriverOnboardingScreen> {
       'title': 'Start Your Passion!\nYour Journey, Our Expertise',
     },
     {
-      'image': 'images/driver1.png',
+      'image': 'images/driver12.png',
       'title': '"Driving with pride!\n Pick up passengers by taxi!"',
     },
   ];
@@ -39,7 +39,7 @@ class _DriverOnboardingScreenState extends State<DriverOnboardingScreen> {
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return Scaffold(
-      backgroundColor: Color(0xffDBDBE7),
+      // backgroundColor: Color(0xffDBDBE7),
       body: Stack(
         children: [
           PageView.builder(
@@ -117,7 +117,7 @@ class _DriverOnboardingScreenState extends State<DriverOnboardingScreen> {
                           .primaryColor, // Use the primary color from the theme
                     ),
                     onPressed: () {
-                      Get.offAll(() => const PassengerDashboardScreen());
+                      Get.offAll(() => const DriverDashboardScreen());
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
